@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20241021 16:30:01.251" rpa="false" schemaversion="3">
+<suite id="s1" name="Test search" source="C:\Users\ADMIN\Desktop\test package\Test_search.robot">
+<test id="s1-t1" name="TC2003 ค้นหาที่แพ็คเกจโดยค้นหาจากชื่อจังหวัด" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20241021 16:30:01.415" level="INFO">Opening browser 'Edge' to base url 'https://h2-o-project-two.vercel.app/'.</msg>
+<msg timestamp="20241021 16:30:01.421" level="INFO">Executing: C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20241021 16:30:01.414" endtime="20241021 16:30:03.720"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20241021 16:30:03.721" endtime="20241021 16:30:03.785"/>
+</kw>
+<kw name="InputNameProvincePackage" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SearchPackage}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20241021 16:30:03.786" endtime="20241021 16:30:04.274"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${SearchPackage}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241021 16:30:04.274" level="INFO">Clicking button 'id=button-homestaySearch-noSelect'.</msg>
+<status status="PASS" starttime="20241021 16:30:04.274" endtime="20241021 16:30:04.349"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NameSearch}</arg>
+<arg>${InputSearchProvincePackage}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241021 16:30:04.350" level="INFO">Typing text 'นครปฐม' into text field 'id=search-text'.</msg>
+<status status="PASS" starttime="20241021 16:30:04.349" endtime="20241021 16:30:04.464"/>
+</kw>
+<status status="PASS" starttime="20241021 16:30:03.786" endtime="20241021 16:30:04.464"/>
+</kw>
+<kw name="DefinePeople" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${People}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241021 16:30:04.466" level="INFO">Clicking button 'id=people-buttonHomstay'.</msg>
+<status status="PASS" starttime="20241021 16:30:04.465" endtime="20241021 16:30:04.536"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Young}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241021 16:30:04.537" level="INFO">Clicking button 'id=Increase[1]'.</msg>
+<status status="PASS" starttime="20241021 16:30:04.536" endtime="20241021 16:30:04.593"/>
+</kw>
+<status status="PASS" starttime="20241021 16:30:04.465" endtime="20241021 16:30:04.594"/>
+</kw>
+<kw name="StartandEnd_Package" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Date}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241021 16:30:04.595" level="INFO">Clicking button 'id=date-buttonHomstay'.</msg>
+<status status="PASS" starttime="20241021 16:30:04.594" endtime="20241021 16:30:04.672"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Package-Start}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241021 16:30:04.673" level="INFO">Clicking button 'xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[25]'.</msg>
+<status status="PASS" starttime="20241021 16:30:04.672" endtime="20241021 16:30:04.748"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Package-End}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241021 16:30:04.748" level="INFO">Clicking button 'xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[32]'.</msg>
+<status status="PASS" starttime="20241021 16:30:04.748" endtime="20241021 16:30:04.830"/>
+</kw>
+<status status="PASS" starttime="20241021 16:30:04.594" endtime="20241021 16:30:04.830"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241021 16:30:04.831" level="INFO">Clicking element 'id=search-Homestay'.</msg>
+<status status="PASS" starttime="20241021 16:30:04.831" endtime="20241021 16:30:04.941"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241021 16:30:07.942" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20241021 16:30:04.942" endtime="20241021 16:30:07.942"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${Detail-Package}</arg>
+<arg>${InputSearchProvincePackage}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20241021 16:30:07.943" endtime="20241021 16:30:07.976"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Detail-Package}</arg>
+<arg>${InputSearchProvincePackage}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20241021 16:30:07.999" level="INFO">Element 'id=detailCard-Package' contains text 'นครปฐม'.</msg>
+<status status="PASS" starttime="20241021 16:30:07.977" endtime="20241021 16:30:07.999"/>
+</kw>
+<kw name="Capture Screenshot" library="keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241021 16:30:13.000" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20241021 16:30:08.000" endtime="20241021 16:30:13.000"/>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<msg timestamp="20241021 16:30:13.000" level="INFO">${timestamp} = 1729503013</msg>
+<status status="PASS" starttime="20241021 16:30:13.000" endtime="20241021 16:30:13.000"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${screenshot_path}</var>
+<arg>${SCREENSHOT_DIR}/screenshot_${timestamp}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20241021 16:30:13.000" level="INFO">${screenshot_path} = C:\Users\ADMIN\Desktop\test package/screenshots/Search/screenshot_1729503013.png</msg>
+<status status="PASS" starttime="20241021 16:30:13.000" endtime="20241021 16:30:13.000"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${screenshot_path}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20241021 16:30:13.173" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Search/screenshot_1729503013.png"&gt;&lt;img src="screenshots/Search/screenshot_1729503013.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20241021 16:30:13.000" endtime="20241021 16:30:13.173"/>
+</kw>
+<status status="PASS" starttime="20241021 16:30:07.999" endtime="20241021 16:30:13.173"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20241021 16:30:13.174" endtime="20241021 16:30:15.418"/>
+</kw>
+<status status="PASS" starttime="20241021 16:30:01.413" endtime="20241021 16:30:15.419"/>
+</test>
+<status status="PASS" starttime="20241021 16:30:01.252" endtime="20241021 16:30:15.420"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test search">Test search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
